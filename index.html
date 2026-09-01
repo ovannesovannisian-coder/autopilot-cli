@@ -178,7 +178,7 @@
     <section id="pricing" class="section">
         <div class="container">
             <h2>Free and open source</h2>
-            <p class="subtitle">Use it under the MIT license. Sponsor ongoing work with TON if it saves you time.</p>
+            <p class="subtitle">Use it under the MIT license. Sponsor ongoing work with USDT on the TON network if it saves you time.</p>
             <div class="grid">
                 <div class="card" style="text-align: center; border-color: var(--accent);">
                     <h3>MIT License</h3>
@@ -191,7 +191,15 @@
                         <li>Direct GitHub download</li>
                     </ul>
                     <br>
-                    <a href="https://app.tonkeeper.com/transfer/UQDHA5jEi88JRomsstaA-srnIJyayuK95FsGuXI6_B2Cngbk?amount=1000000000&amp;text=AutoPilot%20sponsor" class="btn btn-primary" style="width:100%;">Sponsor 1 TON</a>
+                    <a href="https://tonscan.com/address/UQDHA5jEi88JRomsstaA-srnIJyayuK95FsGuXI6_B2Cngbk" class="btn btn-primary" style="width:100%;" target="_blank" rel="noopener">Pay in USDT on TON network</a>
+                    <ol class="features-list" style="text-align:left; margin-top:20px;">
+                        <li>Select USDT in your wallet.</li>
+                        <li>Select the TON network.</li>
+                        <li>Copy the address below and send USDT only.</li>
+                    </ol>
+                    <p class="price-note"><span id="autopilot-usdt-address">UQDHA5jEi88JRomsstaA-srnIJyayuK95FsGuXI6_B2Cngbk</span></p>
+                    <button type="button" class="btn btn-secondary" style="width:100%;" onclick="navigator.clipboard.writeText(document.getElementById('autopilot-usdt-address').textContent).then(() => { this.textContent = 'Address copied'; })">Copy USDT address</button>
+                    <p class="price-note">No amount is prefilled.</p>
                 </div>
             </div>
         </div>
@@ -211,10 +219,27 @@
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            © 2026 AutoPilot CLI. All rights reserved. · <a href="https://github.com/ovannesovannisian-coder/autopilot-cli/issues/new">Contact</a>
-        </div>
-    </footer>
+    
+
+        <footer>
+            <div class="container">
+                <p style="margin-bottom: 8px;"><strong>Purchase</strong> with USDT on the TON network</p>
+                <ol style="text-align:left; max-width:520px; margin:8px auto 12px; color:var(--muted); line-height:1.7;">
+                    <li>Open a purchase issue with your requirements and preferred delivery method.</li>
+                    <li>After scope confirmation, send the agreed USDT amount to the address below.</li>
+                    <li>Include the issue number in the payment comment so we can match it.</li>
+                </ol>
+                <p><strong>Address (USDT, TON only):</strong></p>
+                <p id="autopilot-pay-address" style="word-break:break-all; font-family:monospace;">UQDHA5jEi88JRomsstaA-srnIJyayuK95FsGuXI6_B2Cngbk</p>
+                <div class="cta-row" style="margin-top:12px;">
+                    <a href="https://github.com/ovannesovannisian-coder/autopilot-cli/issues/new?template=purchase-inquiry.yml" class="btn btn-primary" target="_blank" rel="noopener">Open purchase issue</a>
+                    <button type="button" class="btn btn-secondary" onclick="navigator.clipboard.writeText(document.getElementById('autopilot-pay-address').textContent).then(() => { this.textContent = 'Address copied'; })">Copy payment address</button>
+                    <a href="https://tonscan.com/address/UQDHA5jEi88JRomsstaA-srnIJyayuK95FsGuXI6_B2Cngbk" class="btn btn-secondary" target="_blank" rel="noopener">Verify address</a>
+                </div>
+                <p style="color:var(--muted); font-size:.85rem;">© 2026 AutoPilot CLI. All rights reserved.</p>
+                <p class="fine-print" style="margin-top:12px;">No amount is prefilled. Send USDT only on the TON network. Do not include secrets in public issues.</p>
+            </div>
+        </footer>
+
 </body>
 </html>
