@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoPilot CLI — Automation Utilities for Backups, File Org & Health Checks</title>
+    <meta name="description" content="Lightweight Python automation utilities for backups, file organization, duplicate finding, and system health checks. One-time purchase, stdlib-only.">
+    <style>
+        :root {
+            --bg: #0a0f1a;
+            --surface: #131b2e;
+            --text: #e4e8f1;
+            --muted: #8b95a8;
+            --accent: #10b981;
+            --accent-hover: #059669;
+            --border: #1f2937;
+            --radius: 8px;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+        header {
+            border-bottom: 1px solid var(--border);
+            padding: 20px 0;
+            background: var(--surface);
+        }
+        .nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.4rem; font-weight: 700; color: var(--accent); text-decoration: none; }
+        .nav-links a { color: var(--muted); text-decoration: none; margin-left: 20px; font-size: 0.9rem; }
+        .nav-links a:hover { color: var(--text); }
+        .hero {
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent), #34d399);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+        .hero p { font-size: 1.2rem; color: var(--muted); max-width: 600px; margin: 0 auto 40px; }
+        .cta-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: var(--radius);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all .15s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .btn-primary { background: var(--accent); color: #0a0f1a; }
+        .btn-primary:hover { background: var(--accent-hover); }
+        .btn-secondary { background: transparent; color: var(--text); border: 1px solid var(--border); }
+        .btn-secondary:hover { border-color: var(--text); }
+        .section { padding: 60px 0; }
+        .section h2 { font-size: 2rem; margin-bottom: 12px; }
+        .section .subtitle { color: var(--muted); margin-bottom: 40px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px;
+        }
+        .card h3 { margin-bottom: 8px; }
+        .card p { color: var(--muted); font-size: 0.95rem; }
+        .price { font-size: 2.2rem; font-weight: 700; margin: 12px 0; color: var(--text); }
+        .price-note { font-size: 0.85rem; color: var(--muted); }
+        .code-block {
+            background: #0d1117;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px;
+            overflow-x: auto;
+            font-family: "SF Mono", Monaco, Inconsolata, "Fira Code", monospace;
+            font-size: 0.85rem;
+            color: #c9d1d9;
+        }
+        .code-block .k { color: #ff7b72; }
+        .code-block .s { color: #a5d6ff; }
+        .code-block .c { color: #8b949e; }
+        footer { border-top: 1px solid var(--border); padding: 40px 0; text-align: center; color: var(--muted); font-size: 0.85rem; }
+        .features-list { list-style: none; }
+        .features-list li { padding: 8px 0; color: var(--muted); }
+        .features-list li::before { content: "✓ "; color: var(--accent); font-weight: 700; }
+        a { color: var(--accent); }
+        .contact-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 40px;
+            text-align: center;
+        }
+        .contact-box a { font-size: 1.2rem; font-weight: 600; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container nav">
+            <a href="#" class="logo">AutoPilot CLI</a>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Automate the boring stuff. Once.</h1>
+            <p>Backup, organize, deduplicate, and monitor your systems with one lightweight CLI. Pure Python stdlib — no dependencies, no bloat.</p>
+            <div class="cta-row">
+                <a href="#pricing" class="btn btn-primary">Buy AutoPilot — $19</a>
+                <a href="https://github.com/ovannesovannisian-coder/autopilot-cli" class="btn btn-secondary" target="_blank">View Source</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="section">
+        <div class="container">
+            <h2>Batteries included, zero deps</h2>
+            <p class="subtitle">Everything runs on Python standard library. Install once, run forever.</p>
+            <div class="grid">
+                <div class="card">
+                    <h3>💾 Smart Backups</h3>
+                    <p>Compressed ZIP or tar.gz archives with timestamped names, automatic pruning of old backups, and cross-platform paths.</p>
+                </div>
+                <div class="card">
+                    <h3>📁 File Organizer</h3>
+                    <p>Sort downloads and folders by extension instantly. Move or copy mode. Handles thousands of files in seconds.</p>
+                </div>
+                <div class="card">
+                    <h3>🔍 Duplicate Finder</h3>
+                    <p>MD5-based deduplication across any directory tree. Lists groups of identical files for review or cleanup.</p>
+                </div>
+                <div class="card">
+                    <h3>💚 Health Checks</h3>
+                    <p>Disk usage, memory stats, uptime, and full system reports in JSON. Perfect for monitoring scripts and cron jobs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: var(--surface);">
+        <div class="container">
+            <h2>One command, zero config</h2>
+            <p class="subtitle">Drop-in CLI that works immediately.</p>
+            <div class="code-block">
+<span class="c"># Backup your projects</span>
+<span class="k">python</span> <span class="k">-m</span> src.cli backup ~/projects /mnt/backups --prune --keep 7
+
+<span class="c"># Organize Downloads by file type</span>
+<span class="k">python</span> <span class="k">-m</span> src.cli organize ~/Downloads --move
+
+<span class="c"># Find duplicate files</span>
+<span class="k">python</span> <span class="k">-m</span> src.cli duplicates ~/Downloads
+
+<span class="c"># Full system health report</span>
+<span class="k">python</span> <span class="k">-m</span> src.cli health
+
+<span class="c"># Disk usage summary</span>
+<span class="k">python</span> <span class="k">-m</span> src.cli usage /home/user
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="section">
+        <div class="container">
+            <h2>Simple pricing</h2>
+            <p class="subtitle">One-time payment. No subscriptions. MIT licensed.</p>
+            <div class="grid">
+                <div class="card" style="text-align: center; border-color: var(--accent);">
+                    <h3>Single License</h3>
+                    <div class="price">$19</div>
+                    <p class="price-note">One developer, unlimited machines</p>
+                    <ul class="features-list">
+                        <li>Full source code</li>
+                        <li>Lifetime updates</li>
+                        <li>MIT license</li>
+                        <li>Email support</li>
+                        <li>Instant download</li>
+                    </ul>
+                    <br>
+                    <a href="https://github.com/ovannesovannisian-coder/autopilot-cli/issues/new?title=Buy%20AutoPilot%20CLI&body=I%20want%20to%20purchase%20AutoPilot%20CLI.%20Please%20send%20payment%20details." class="btn btn-primary" style="width:100%;">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Get in touch</h2>
+            <p class="subtitle">Questions? Feature requests? Just say hello.</p>
+            <div class="contact-box">
+                <p style="margin-bottom: 20px; color: var(--muted);">We respond within 24 hours.</p>
+                <a href="https://github.com/ovannesovannisian-coder/autopilot-cli/issues/new">Contact via GitHub Issues</a>
+                <br><br>
+                <a href="https://github.com/ovannesovannisian-coder/autopilot-cli" target="_blank" rel="noopener" class="btn btn-secondary">GitHub</a>
+                <a href="https://github.com/ovannesovannisian-coder" target="_blank" rel="noopener" class="btn btn-secondary">GitHub Profile</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            © 2026 AutoPilot CLI. All rights reserved. · <a href="https://github.com/ovannesovannisian-coder/autopilot-cli/issues/new">Contact</a>
+        </div>
+    </footer>
+</body>
+</html>
