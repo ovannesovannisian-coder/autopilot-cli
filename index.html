@@ -192,6 +192,13 @@
                     </ul>
                     <br>
                     <a href="https://tonscan.com/address/UQDHA5jEi88JRomsstaA-srnIJyayuK95FsGuXI6_B2Cngbk" class="btn btn-primary" style="width:100%;" target="_blank" rel="noopener">Pay in USDT on TON network</a>
+<a href="ton://transfer/UQDHA5jEi88JRomsstaA-srnIJyayuK95FsGuXI6_B2Cngbk?text=autopilot" class="btn btn-primary" style="width:100%; margin-top:8px;" target="_blank" rel="noopener">🔗 Open in TON wallet</a>
+                    <button type="button" class="btn btn-secondary" style="width:100%; margin-top:8px;" onclick="var q=document.getElementById('qr-autopilot');q.style.display=q.style.display==='block'?'none':'block';">Show QR / QR-код</button>
+                    <div id="qr-autopilot" style="display:none; text-align:center; margin-top:12px;">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=ton%3A%2F%2Ftransfer%2FUQDHA5jEi88JRomsstaA-srnIJyayuK95FsGuXI6_B2Cngbk%3Ftext%3Dautopilot" alt="TON payment QR" style="border-radius:8px; background:#fff; padding:8px;" width="200" height="200">
+                        <p class="price-note" style="margin-top:8px;">Scan with a TON wallet (Tonkeeper / MyTonWallet / Tonhub). Choose USDT → TON network → enter the amount (see pricing) and comment.</p>
+                    </div>
+
                     <ol class="features-list" style="text-align:left; margin-top:20px;">
                         <li>Select USDT in your wallet.</li>
                         <li>Select the TON network.</li>
