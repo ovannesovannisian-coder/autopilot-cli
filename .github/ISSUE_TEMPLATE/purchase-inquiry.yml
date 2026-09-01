@@ -1,0 +1,37 @@
+name: Purchase Inquiry
+description: Ask a pre-sale question or request a fixed quote.
+title: "[Purchase] "
+labels: ["purchase", "inquiry"]
+body:
+  - type: input
+    id: product
+    attributes:
+      label: Product / service
+      description: Which product, license tier, or service are you asking about?
+      placeholder: "e.g. DataScrape Pro Team, custom scraper, consulting"
+    validations:
+      required: true
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Requirements
+      description: Describe what you need, public inputs, constraints, and deadlines.
+    validations:
+      required: true
+  - type: dropdown
+    id: payment
+    attributes:
+      label: Preferred payment method
+      options:
+        - USDT (TON network)
+        - Invoice / email
+        - Other
+    validations:
+      required: false
+  - type: textarea
+    id: contact
+    attributes:
+      label: Contact info
+      description: Email or handle to reach you. Do not include secrets or private data.
+    validations:
+      required: false
