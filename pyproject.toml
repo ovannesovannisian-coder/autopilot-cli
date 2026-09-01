@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "autopilot-cli"
+version = "1.0.0"
+description = "Zero-dependency CLI for backups, file organization, and system health checks"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [
+    {name = "ovannesovannisian-coder", email = "contact@datascrape.pro"},
+]
+keywords = ["cli", "backup", "file-organization", "system-health", "automation", "devops"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: System :: Archiving",
+    "Topic :: System :: Filesystems",
+    "Topic :: Utilities",
+    "Environment :: Console",
+    "Operating System :: OS Independent",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/ovannesovannisian-coder/autopilot-cli"
+Repository = "https://github.com/ovannesovannisian-coder/autopilot-cli"
+
+[tool.setuptools.packages.find]
+include = ["src*"]
